@@ -1,5 +1,7 @@
 # ENERConnect.EU 🌍
 
+[Visit ENERConnect.EU](https://enerconnect.eu) | [GitHub](https://github.com/alpha912/enerconnect) | [Documentation](https://github.com/alpha912/enerconnect/wiki)
+
 **European Network for Energy Research, Collaboration, and Knowledge Exchange**
 
 [![GitHub Sponsors](https://img.shields.io/github/sponsors/alpha912?style=social)](https://github.com/sponsors/alpha912)
@@ -11,6 +13,16 @@
 ## 🌟 About ENERConnect.EU
 
 ENERConnect.EU is an open-source, collaborative digital platform designed to unify and streamline knowledge, research, and best practices across the European energy landscape. Our mission is to accelerate Europe's energy transition by centralizing knowledge, fostering collaboration, and enabling real-time sharing of insights among researchers, policymakers, and industry stakeholders.
+
+## 📚 Documentation
+
+For comprehensive documentation, please visit:
+
+- [Project Wiki](https://github.com/alpha912/enerconnect/wiki) - Detailed documentation and guides
+- [API Documentation](https://github.com/alpha912/enerconnect/wiki/API-Documentation) - API endpoints and usage
+- [Development Guide](https://github.com/alpha912/enerconnect/wiki/Development-Guide) - Setup and development workflow
+- [Contributing Guidelines](https://github.com/alpha912/enerconnect/wiki/Contributing) - How to contribute
+- [Project Roadmap](https://github.com/alpha912/enerconnect/projects/1) - Development progress and plans
 
 ## 🚀 Key Features
 
