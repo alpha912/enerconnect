@@ -6,7 +6,7 @@
 
 [![GitHub Sponsors](https://img.shields.io/github/sponsors/alpha912?style=social)](https://github.com/sponsors/alpha912)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](https://github.com/alpha912/enerconnect/wiki/Code-of-Conduct)
 
 > **⚠️ Disclaimer**: ENERConnect.EU is an independent, open-source initiative created by individuals passionate about advancing energy research collaboration. This project is not affiliated with, endorsed by, or connected to any official European Union institutions, government bodies, or energy organizations. Our goal is to provide a free and open platform for knowledge exchange in the energy sector.
 
@@ -177,7 +177,7 @@ For more information about supporting ENERConnect, visit our [funding documentat
 
 ## 🤝 Contributing
 
-We welcome contributions from researchers, developers, and energy experts across Europe! Please read our [Contributing Guidelines](CONTRIBUTING.md) to get started.
+We welcome contributions from researchers, developers, and energy experts across Europe! Please read our [Contributing Guidelines](https://github.com/alpha912/enerconnect/wiki/Contributing) to get started.
 
 ### Ways to Contribute
 
@@ -196,6 +196,8 @@ We welcome contributions from researchers, developers, and energy experts across
 5. Run tests and lint checks
 6. Submit a pull request
 
+For detailed development instructions, visit our [Development Guide](https://github.com/alpha912/enerconnect/wiki/Development-Guide).
+
 ## 🧪 Testing
 
 ```bash
@@ -211,24 +213,14 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 
 ## 🤝 Code of Conduct
 
-We are committed to fostering an inclusive and welcoming community. Please read and follow our [Code of Conduct](CODE_OF_CONDUCT.md).
-
-## 📞 Contact
-
-- GitHub Discussions: [enerconnect/discussions](https://github.com/alpha912/enerconnect/discussions)
-- Email: contact@enerconnect.eu
-- Twitter: [@enerconnect_eu](https://twitter.com/enerconnect_eu)
-
-## 🙏 Acknowledgments
-
-Special thanks to all our contributors and sponsors who make this project possible!
+We are committed to fostering an inclusive and welcoming community. Please read our [Code of Conduct](https://github.com/alpha912/enerconnect/wiki/Code-of-Conduct) for details on our community standards.
 
 ---
 
 <div align="center">
 
-**Join us in shaping Europe's energy future! 🌟**
+**ENERConnect.EU** - Empowering European Energy Research
 
-[Visit ENERConnect.EU](https://enerconnect.eu) | [GitHub](https://github.com/alpha912/enerconnect) | [Documentation](https://docs.enerconnect.eu)
+[Website](https://enerconnect.eu) | [Documentation](https://github.com/alpha912/enerconnect/wiki) | [Community](https://github.com/alpha912/enerconnect/discussions)
 
 </div>
