@@ -2,6 +2,15 @@
 
 First off, thank you for considering contributing to ENERConnect.EU! It's people like you that make ENERConnect.EU such a great tool for the European energy research community.
 
+> **⚠️ Disclaimer**: ENERConnect.EU is an independent, community-driven open-source initiative. We are not affiliated with, endorsed by, or connected to any official European Union institutions, government bodies, or energy organizations. We are a group of individuals passionate about advancing energy research collaboration through open source.
+
+## Our Values
+
+- **Open & Independent**: We maintain our platform as a free, independent resource for the energy research community
+- **Community First**: Every decision is made with the community's best interests in mind
+- **Transparency**: We operate with full transparency in our development and decision-making processes
+- **Inclusivity**: We welcome contributors from all backgrounds and experience levels
+
 ## Code of Conduct
 
 This project and everyone participating in it is governed by our Code of Conduct. By participating, you are expected to uphold this code.
