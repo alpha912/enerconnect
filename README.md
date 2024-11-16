@@ -6,6 +6,8 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
 
+> **⚠️ Disclaimer**: ENERConnect.EU is an independent, open-source initiative created by individuals passionate about advancing energy research collaboration. This project is not affiliated with, endorsed by, or connected to any official European Union institutions, government bodies, or energy organizations. Our goal is to provide a free and open platform for knowledge exchange in the energy sector.
+
 ## 🌟 About ENERConnect.EU
 
 ENERConnect.EU is an open-source, collaborative digital platform designed to unify and streamline knowledge, research, and best practices across the European energy landscape. Our mission is to accelerate Europe's energy transition by centralizing knowledge, fostering collaboration, and enabling real-time sharing of insights among researchers, policymakers, and industry stakeholders.
