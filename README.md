@@ -21,7 +21,7 @@ ENERConnect.EU is an open-source, collaborative digital platform designed to uni
 
 ## 🛠️ Technology Stack
 
-- **Frontend**: Next.js 13 with TypeScript and Tailwind CSS
+- **Frontend**: Next.js 15.0.3 with TypeScript and Tailwind CSS
 - **Data Storage**: JSON-based database with GitHub
 - **Authentication**: GitHub OAuth
 - **Hosting**: Vercel
@@ -56,15 +56,26 @@ ENERConnect.EU is an open-source, collaborative digital platform designed to uni
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
+### Development Scripts
+
+```bash
+npm run dev      # Start development server
+npm run build    # Create production build
+npm run start    # Start production server
+npm run lint     # Run ESLint for code quality
+```
+
 ## 📁 Project Structure
 
 ```
 enerconnect/
 ├── frontend/              # Next.js frontend application
 │   ├── src/
-│   │   ├── app/          # Next.js 13 app directory
+│   │   ├── app/          # Next.js 15 app directory
 │   │   ├── components/   # Reusable components
-│   │   └── lib/         # Utility functions
+│   │   ├── hooks/       # Custom React hooks
+│   │   ├── lib/         # Utility functions
+│   │   └── styles/      # Global styles and Tailwind config
 ├── json-database/         # JSON data storage
 │   ├── projects/         # Energy research projects
 │   ├── case-studies/     # Implementation case studies
