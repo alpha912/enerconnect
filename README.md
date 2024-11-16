@@ -77,9 +77,9 @@ enerconnect/
 
 ENERConnect.EU is a community-driven project that relies on support from individuals, institutions, and organizations across Europe. You can support us through GitHub Sponsors:
 
-- **Individual Supporters**: €5-€20/month
-- **Educational & Research Institutions**: €50-€200/month
-- **Corporate & Government Sponsors**: €500+/month
+- **Individual Supporters**
+- **Educational & Research Institutions**
+- **Corporate & Government Sponsors**
 
 [Become a Sponsor](https://github.com/sponsors/alpha912)
 

@@ -1,6 +1,6 @@
-# Contributing to ENERCONNECT.EU
+# Contributing to ENERConnect.EU
 
-First off, thank you for considering contributing to ENERCONNECT.EU! It's people like you that make ENERCONNECT.EU such a great tool for the European energy research community.
+First off, thank you for considering contributing to ENERConnect.EU! It's people like you that make ENERConnect.EU such a great tool for the European energy research community.
 
 ## Code of Conduct
 
@@ -27,7 +27,7 @@ Enhancement suggestions are tracked as GitHub issues. When creating an enhanceme
 * Provide a step-by-step description of the suggested enhancement
 * Provide specific examples to demonstrate the steps
 * Describe the current behavior and explain which behavior you expected to see instead
-* Explain why this enhancement would be useful to most ENERCONNECT.EU users
+* Explain why this enhancement would be useful to most ENERConnect.EU users
 
 ### Contributing Data
 
@@ -95,4 +95,4 @@ Don't hesitate to contact us if you have any questions. You can:
 * Start a discussion
 * Contact us via email at contact@enerconnect.eu
 
-Thank you for contributing to ENERCONNECT.EU!
+Thank you for contributing to ENERConnect.EU!
