@@ -1,0 +1,45 @@
+name: Project Management Automation
+
+on:
+  issues:
+    types: [opened, edited, deleted, closed, reopened]
+  pull_request:
+    types: [opened, edited, closed, reopened]
+
+jobs:
+  project_automation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/add-to-project@v0.5.0
+        with:
+          project-url: https://github.com/alpha912/enerconnect/projects/1
+          github-token: ${{ secrets.PROJECT_TOKEN }}
+
+  update_project_item:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Update Project Item
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.PROJECT_TOKEN }}
+          script: |
+            const event = context.payload;
+            const issue = event.issue || event.pull_request;
+            
+            if (event.action === 'closed') {
+              // Update status to Done when issue/PR is closed
+              await github.rest.projects.updateCard({
+                card_id: issue.id,
+                column_id: 'Done'
+              });
+            }
+            
+            if (event.action === 'reopened') {
+              // Update status to In Progress when issue/PR is reopened
+              await github.rest.projects.updateCard({
+                card_id: issue.id,
+                column_id: 'In Progress'
+              });
+            }
