@@ -1,0 +1,136 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["resourceId", "title", "type", "createdAt", "lastModified", "status"],
+  "properties": {
+    "resourceId": {
+      "type": "string",
+      "description": "Unique identifier for the resource"
+    },
+    "title": {
+      "type": "string",
+      "description": "Resource title"
+    },
+    "type": {
+      "type": "string",
+      "enum": ["article", "dataset", "tool", "guide", "video", "presentation"],
+      "description": "Type of resource"
+    },
+    "description": {
+      "type": "string",
+      "description": "Resource description"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Creation timestamp"
+    },
+    "lastModified": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Last modification timestamp"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "published", "archived"],
+      "description": "Current publication status"
+    },
+    "author": {
+      "type": "string",
+      "description": "User ID of the author"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Resource tags for categorization"
+    },
+    "language": {
+      "type": "string",
+      "description": "Resource language (ISO 639-1 code)"
+    },
+    "license": {
+      "type": "string",
+      "description": "License information"
+    },
+    "content": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string",
+          "description": "URL to the resource"
+        },
+        "format": {
+          "type": "string",
+          "enum": ["pdf", "doc", "ppt", "csv", "json", "mp4", "html"],
+          "description": "File format"
+        },
+        "size": {
+          "type": "number",
+          "description": "File size in bytes"
+        }
+      },
+      "required": ["url", "format"]
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "keywords": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "targetAudience": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["researchers", "practitioners", "students", "policymakers"]
+          }
+        },
+        "difficulty": {
+          "type": "string",
+          "enum": ["beginner", "intermediate", "advanced"]
+        },
+        "estimatedTime": {
+          "type": "string",
+          "description": "Estimated time to consume the resource"
+        }
+      }
+    },
+    "stats": {
+      "type": "object",
+      "properties": {
+        "views": {
+          "type": "number",
+          "minimum": 0
+        },
+        "downloads": {
+          "type": "number",
+          "minimum": 0
+        },
+        "ratings": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "userId": {
+                "type": "string"
+              },
+              "rating": {
+                "type": "number",
+                "minimum": 1,
+                "maximum": 5
+              },
+              "comment": {
+                "type": "string"
+              }
+            },
+            "required": ["userId", "rating"]
+          }
+        }
+      }
+    }
+  }
+}

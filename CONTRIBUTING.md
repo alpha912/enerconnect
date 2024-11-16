@@ -56,15 +56,75 @@ When contributing to the JSON database:
 5. Push to the branch (`git push origin feature/amazing-feature`)
 6. Open a Pull Request
 
-## Development Process
+## Development Setup
 
-1. Create an issue for any major changes and enhancements
-2. Fork the repo and create your branch from `main`
-3. Make your changes
-4. Add or update tests as needed
-5. Ensure the test suite passes
-6. Make sure your code lints
-7. Issue that pull request!
+1. **Prerequisites**
+   - Node.js (v18 or higher)
+   - Git
+   - Supabase account
+   - Code editor (VS Code recommended)
+
+2. **Environment Setup**
+   ```bash
+   # Clone the repository
+   git clone https://github.com/alpha912/enerconnect.git
+   cd enerconnect
+
+   # Install dependencies
+   npm install
+
+   # Set up environment variables
+   cp .env.example .env.local
+   ```
+
+   Configure your `.env.local`:
+   ```env
+   # API Configuration
+   NEXT_PUBLIC_API_URL=http://localhost:3000
+   
+   # Supabase Configuration
+   NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+   SUPABASE_SERVICE_ROLE_KEY=your_supabase_service_role_key
+   
+   # Application
+   NEXTAUTH_URL=http://localhost:3000
+   NEXTAUTH_SECRET=your_nextauth_secret
+   ```
+
+3. **Start Development Server**
+   ```bash
+   npm run dev
+   ```
+
+## Project Structure
+
+The project is organized as follows:
+
+```
+enerconnect/
+├── frontend/           # Next.js frontend application
+├── json-database/      # Public research data
+│   ├── projects/      # Research projects
+│   ├── case-studies/  # Case studies
+│   ├── resources/     # Educational resources
+│   └── metadata/      # System metadata
+└── docs/              # Documentation
+```
+
+### Data Management
+
+1. **Supabase Database**
+   - User authentication
+   - User profiles
+   - Dynamic application data
+   - Real-time features
+
+2. **JSON Database**
+   - Research projects
+   - Case studies
+   - Educational resources
+   - System metadata
 
 ## Styleguides
 

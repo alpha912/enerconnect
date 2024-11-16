@@ -1,0 +1,110 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["caseId", "title", "createdAt", "lastModified", "status"],
+  "properties": {
+    "caseId": {
+      "type": "string",
+      "description": "Unique identifier for the case study"
+    },
+    "title": {
+      "type": "string",
+      "description": "Case study title"
+    },
+    "summary": {
+      "type": "string",
+      "description": "Brief summary of the case study"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Creation timestamp"
+    },
+    "lastModified": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Last modification timestamp"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "published", "archived"],
+      "description": "Current publication status"
+    },
+    "authors": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "User IDs of authors"
+      }
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Case study tags for categorization"
+    },
+    "content": {
+      "type": "object",
+      "properties": {
+        "background": {
+          "type": "string",
+          "description": "Background information"
+        },
+        "challenge": {
+          "type": "string",
+          "description": "Problem or challenge addressed"
+        },
+        "solution": {
+          "type": "string",
+          "description": "Solution implemented"
+        },
+        "results": {
+          "type": "string",
+          "description": "Outcomes and results"
+        },
+        "lessons": {
+          "type": "string",
+          "description": "Lessons learned"
+        }
+      },
+      "required": ["background", "challenge", "solution", "results"]
+    },
+    "metrics": {
+      "type": "object",
+      "properties": {
+        "energySavings": {
+          "type": "number",
+          "description": "Energy savings in kWh"
+        },
+        "costSavings": {
+          "type": "number",
+          "description": "Cost savings in EUR"
+        },
+        "carbonReduction": {
+          "type": "number",
+          "description": "Carbon reduction in tons CO2"
+        }
+      }
+    },
+    "attachments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "enum": ["image", "document", "data"]
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": ["title", "type", "url"]
+      }
+    }
+  }
+}

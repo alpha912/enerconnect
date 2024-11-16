@@ -13,12 +13,22 @@ None at the moment.
 - [ ] Authentication system needs to be implemented
 - [ ] Data validation for JSON database entries
 - [ ] Rate limiting for API endpoints
+- [ ] Initial setup of Supabase integration requires proper configuration of environment variables
+- [ ] Real-time subscriptions in Supabase may require additional setup
+- [ ] Rate limiting needs to be configured in Supabase dashboard
 
 ### Medium Priority
 
 - [ ] Dark mode transition animations
 - [ ] Mobile navigation menu responsiveness
 - [ ] Search functionality optimization
+- [ ] Limited to publishing quality information only in JSON database
+- [ ] Manual synchronization required between local and remote JSON database
+- [ ] No real-time updates for JSON data
+- [ ] Size limitations for JSON files on GitHub
+- [ ] Potential lag between Supabase and JSON database updates
+- [ ] Need to handle offline scenarios gracefully
+- [ ] Cache invalidation strategies needed
 
 ### Low Priority
 

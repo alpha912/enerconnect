@@ -21,13 +21,59 @@ ENERConnect.EU is an open-source, collaborative digital platform designed to uni
 - **Educational Resources**: Access training materials and workshops
 - **Open Data Repository**: Contribute to and utilize shared research data
 
-## 🛠️ Technology Stack
+## 🛠 Technology Stack
 
-- **Frontend**: Next.js 15.0.3 with TypeScript and Tailwind CSS
-- **Data Storage**: JSON-based database with GitHub
-- **Authentication**: GitHub OAuth
-- **Hosting**: Vercel
-- **CI/CD**: GitHub Actions
+- **Frontend**: Next.js 15.0.3
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Authentication**: Supabase Auth
+- **Database**: 
+  - Supabase (User profiles, Auth)
+  - JSON-based (Public research data)
+
+## 🚀 Quick Start
+
+1. **Prerequisites**
+   - Node.js (v18 or higher)
+   - Git
+   - Supabase account
+
+2. **Environment Variables**
+   Create a `.env.local` file with:
+   ```env
+   # API Configuration
+   NEXT_PUBLIC_API_URL=http://localhost:3000
+   
+   # Supabase Configuration
+   NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+   SUPABASE_SERVICE_ROLE_KEY=your_supabase_service_role_key
+   
+   # Application
+   NEXTAUTH_URL=http://localhost:3000
+   NEXTAUTH_SECRET=your_nextauth_secret
+   ```
+
+3. **Installation**
+   ```bash
+   git clone https://github.com/alpha912/enerconnect.git
+   cd enerconnect
+   npm install
+   npm run dev
+   ```
+
+## 📂 Project Structure
+
+```
+enerconnect/
+├── frontend/           # Next.js frontend application
+├── json-database/      # Public research data
+│   ├── projects/      # Research projects
+│   ├── case-studies/  # Case studies
+│   ├── resources/     # Educational resources
+│   └── metadata/      # System metadata
+└── docs/              # Documentation
+```
 
 ## 🌱 Getting Started
 
@@ -67,34 +113,55 @@ npm run start    # Start production server
 npm run lint     # Run ESLint for code quality
 ```
 
-## 📁 Project Structure
+## Support & Sponsorship
 
-```
-enerconnect/
-├── frontend/              # Next.js frontend application
-│   ├── src/
-│   │   ├── app/          # Next.js 15 app directory
-│   │   ├── components/   # Reusable components
-│   │   ├── hooks/       # Custom React hooks
-│   │   ├── lib/         # Utility functions
-│   │   └── styles/      # Global styles and Tailwind config
-├── json-database/         # JSON data storage
-│   ├── projects/         # Energy research projects
-│   ├── case-studies/     # Implementation case studies
-│   └── resources/        # Educational materials
-├── documentation/         # Project documentation
-└── funding/              # Sponsorship information
-```
+ENERConnect is an open platform that relies on community support and sponsorship to maintain and improve its services. We welcome various forms of support:
+
+### Funding & Sponsorship
+Visit our [funding documentation](./funding/README.md) to learn about:
+- Sponsorship tiers and benefits
+- Funding opportunities
+- Partnership programs
+- Support options
+
+### Ways to Support
+- Become a sponsor
+- Contribute to development
+- Share research data
+- Participate in the community
+
+For sponsorship inquiries: sponsors@enerconnect.eu
 
 ## 💖 Supporting ENERConnect.EU
 
-ENERConnect.EU is a community-driven project that relies on support from individuals, institutions, and organizations across Europe. You can support us through GitHub Sponsors:
+ENERConnect.EU is a community-driven project that aims to advance energy research and collaboration across Europe. We offer multiple ways to support the platform:
 
-- **Individual Supporters**
-- **Educational & Research Institutions**
-- **Corporate & Government Sponsors**
+### 🤝 Join Our Community
+- Contribute to discussions
+- Share research findings
+- Participate in events
+- Help improve documentation
 
-[Become a Sponsor](https://github.com/sponsors/alpha912)
+### 🌱 Become a Sponsor
+Visit our [funding documentation](./funding/README.md) to learn about our sponsorship tiers:
+- Supporter Tier: For individuals and small organizations
+- Partner Tier: For medium organizations
+- Sustainer Tier: For large organizations
+- Institution Tier: For research institutions and universities
+
+### 🔬 Research Collaboration
+- Submit research data
+- Propose joint projects
+- Share case studies
+- Contribute to knowledge base
+
+### 💻 Technical Contributions
+- Code contributions
+- Bug reports
+- Feature requests
+- Documentation improvements
+
+For more information about supporting ENERConnect, visit our [funding documentation](./funding/README.md) or contact us at sponsors@enerconnect.eu.
 
 ## 🤝 Contributing
 

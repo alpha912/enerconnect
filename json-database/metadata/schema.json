@@ -1,0 +1,140 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["version", "lastUpdated"],
+  "properties": {
+    "version": {
+      "type": "string",
+      "description": "System version"
+    },
+    "lastUpdated": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Last system update timestamp"
+    },
+    "systemStats": {
+      "type": "object",
+      "properties": {
+        "totalUsers": {
+          "type": "number",
+          "minimum": 0
+        },
+        "totalProjects": {
+          "type": "number",
+          "minimum": 0
+        },
+        "totalCaseStudies": {
+          "type": "number",
+          "minimum": 0
+        },
+        "totalResources": {
+          "type": "number",
+          "minimum": 0
+        }
+      }
+    },
+    "maintenance": {
+      "type": "object",
+      "properties": {
+        "isUnderMaintenance": {
+          "type": "boolean",
+          "default": false
+        },
+        "maintenanceMessage": {
+          "type": "string"
+        },
+        "plannedMaintenanceWindows": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "startTime": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "endTime": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "description": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "backups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "timestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "type": {
+            "type": "string",
+            "enum": ["full", "incremental"]
+          },
+          "status": {
+            "type": "string",
+            "enum": ["success", "failed", "in-progress"]
+          }
+        }
+      }
+    },
+    "apiLimits": {
+      "type": "object",
+      "properties": {
+        "defaultRateLimit": {
+          "type": "number",
+          "description": "Requests per minute"
+        },
+        "maxFileSize": {
+          "type": "number",
+          "description": "Maximum file size in bytes"
+        },
+        "maxConcurrentConnections": {
+          "type": "number"
+        }
+      }
+    },
+    "features": {
+      "type": "object",
+      "properties": {
+        "enabledFeatures": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "betaFeatures": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "deprecatedFeatures": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "deprecationDate": {
+                "type": "string",
+                "format": "date"
+              },
+              "removalDate": {
+                "type": "string",
+                "format": "date"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

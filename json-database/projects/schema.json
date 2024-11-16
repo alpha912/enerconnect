@@ -1,0 +1,87 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["projectId", "title", "createdAt", "lastModified", "status"],
+  "properties": {
+    "projectId": {
+      "type": "string",
+      "description": "Unique identifier for the project"
+    },
+    "title": {
+      "type": "string",
+      "description": "Project title"
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed project description"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Project creation timestamp"
+    },
+    "lastModified": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Last modification timestamp"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "active", "completed", "archived"],
+      "description": "Current project status"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Project tags for categorization"
+    },
+    "participants": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "User IDs of project participants"
+      }
+    },
+    "objectives": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Project objectives"
+    },
+    "timeline": {
+      "type": "object",
+      "properties": {
+        "startDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "endDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "milestones": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string"
+              },
+              "date": {
+                "type": "string",
+                "format": "date"
+              },
+              "status": {
+                "type": "string",
+                "enum": ["pending", "completed", "delayed"]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
