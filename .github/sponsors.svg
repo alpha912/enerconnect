@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .text { font: 14px Arial; fill: #666; }
+    .placeholder { font: 12px Arial; fill: #999; }
+  </style>
+  <rect width="800" height="100" fill="#f8f9fa"/>
+  <text x="400" y="50" text-anchor="middle" class="text">
+    Become our first sponsor!
+  </text>
+  <text x="400" y="70" text-anchor="middle" class="placeholder">
+    Support ENERConnect.EU and help advance European energy research
+  </text>
+</svg>

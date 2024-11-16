@@ -223,4 +223,24 @@ We are committed to fostering an inclusive and welcoming community. Please read 
 
 [Website](https://enerconnect.eu) | [Documentation](https://github.com/alpha912/enerconnect/wiki) | [Community](https://github.com/alpha912/enerconnect/discussions)
 
+### Connect With Us
+[GitHub](https://github.com/alpha912/enerconnect) | [Twitter](https://twitter.com/enerconnect_eu) | [LinkedIn](https://linkedin.com/company/enerconnect)  
+📧 [contact@enerconnect.eu](mailto:contact@enerconnect.eu) | 💬 [Join Discord](https://discord.gg/enerconnect)
+
+### Support the Project
+[Become a Sponsor](https://github.com/sponsors/alpha912) | [Donate](https://opencollective.com/enerconnect) | [Contributing Guide](https://github.com/alpha912/enerconnect/wiki/Contributing)
+
+### Sponsors
+
+<a href="https://github.com/sponsors/alpha912">
+  <img src="https://raw.githubusercontent.com/alpha912/enerconnect/main/.github/sponsors.svg" alt="Sponsors" />
+</a>
+
+<sub>
+© 2024 ENERConnect.EU. All rights reserved.  
+
+Licensed under [Apache 2.0](LICENSE). Built with ❤️ for the European energy research community.  
+[Terms](https://github.com/alpha912/enerconnect/wiki/Terms) · [Privacy](https://github.com/alpha912/enerconnect/wiki/Privacy) · [Security](https://github.com/alpha912/enerconnect/wiki/Security)
+</sub>
+
 </div>
