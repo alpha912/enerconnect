@@ -1,0 +1,27 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2024-01-01T00:00:00Z",
+  "statistics": {
+    "general": {
+      "totalUsers": 0,
+      "activeUsers": 0,
+      "totalProjects": 0,
+      "totalCaseStudies": 0,
+      "totalResources": 0
+    },
+    "research": {
+      "projectsByCategory": {},
+      "projectsByRegion": {},
+      "collaborationStats": {
+        "crossBorder": 0,
+        "institutionalCollaborations": 0
+      }
+    },
+    "engagement": {
+      "downloads": 0,
+      "citations": 0,
+      "contributions": 0
+    }
+  },
+  "historicalData": []
+}

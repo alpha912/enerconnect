@@ -1,0 +1,71 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["version", "lastUpdated", "tags"],
+  "properties": {
+    "version": {
+      "type": "string",
+      "description": "Schema version"
+    },
+    "lastUpdated": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Last update timestamp"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "category"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique tag identifier"
+          },
+          "name": {
+            "type": "string",
+            "description": "Display name of the tag"
+          },
+          "category": {
+            "type": "string",
+            "enum": ["technology", "research", "region", "topic", "other"],
+            "description": "Category of the tag"
+          },
+          "description": {
+            "type": "string",
+            "description": "Optional description of the tag"
+          },
+          "parentId": {
+            "type": "string",
+            "description": "Optional parent tag ID for hierarchical tags"
+          },
+          "metadata": {
+            "type": "object",
+            "description": "Additional metadata for the tag"
+          }
+        }
+      }
+    },
+    "categories": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Category identifier"
+          },
+          "name": {
+            "type": "string",
+            "description": "Display name of the category"
+          },
+          "description": {
+            "type": "string",
+            "description": "Optional category description"
+          }
+        }
+      }
+    }
+  }
+}

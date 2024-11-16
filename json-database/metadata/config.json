@@ -1,0 +1,39 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2024-01-01T00:00:00Z",
+  "config": {
+    "system": {
+      "maintenance": {
+        "enabled": false,
+        "message": "",
+        "plannedWindows": []
+      },
+      "caching": {
+        "enabled": true,
+        "ttl": 3600
+      }
+    },
+    "features": {
+      "research": {
+        "projectSubmissions": true,
+        "collaborationTools": true,
+        "dataSharing": true
+      },
+      "community": {
+        "discussions": true,
+        "events": true,
+        "messaging": true
+      }
+    },
+    "api": {
+      "rateLimiting": {
+        "enabled": true,
+        "requestsPerMinute": 60
+      },
+      "cors": {
+        "allowedOrigins": ["http://localhost:3000"],
+        "allowedMethods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
+      }
+    }
+  }
+}

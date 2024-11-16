@@ -1,0 +1,32 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2024-01-01T00:00:00Z",
+  "tags": [],
+  "categories": [
+    {
+      "id": "technology",
+      "name": "Technology",
+      "description": "Technology-related tags"
+    },
+    {
+      "id": "research",
+      "name": "Research",
+      "description": "Research-related tags"
+    },
+    {
+      "id": "region",
+      "name": "Region",
+      "description": "Geographical regions"
+    },
+    {
+      "id": "topic",
+      "name": "Topic",
+      "description": "Subject matter topics"
+    },
+    {
+      "id": "other",
+      "name": "Other",
+      "description": "Miscellaneous tags"
+    }
+  ]
+}

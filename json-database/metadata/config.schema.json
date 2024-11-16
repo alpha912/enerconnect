@@ -1,0 +1,149 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["version", "lastUpdated", "config"],
+  "properties": {
+    "version": {
+      "type": "string",
+      "description": "Schema version"
+    },
+    "lastUpdated": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Last update timestamp"
+    },
+    "config": {
+      "type": "object",
+      "required": ["system", "features", "api"],
+      "properties": {
+        "system": {
+          "type": "object",
+          "properties": {
+            "maintenance": {
+              "type": "object",
+              "properties": {
+                "enabled": {
+                  "type": "boolean",
+                  "default": false,
+                  "description": "System maintenance mode"
+                },
+                "message": {
+                  "type": "string",
+                  "description": "Maintenance message"
+                },
+                "plannedWindows": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "start": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "end": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "description": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "caching": {
+              "type": "object",
+              "properties": {
+                "enabled": {
+                  "type": "boolean",
+                  "default": true
+                },
+                "ttl": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "description": "Cache TTL in seconds"
+                }
+              }
+            }
+          }
+        },
+        "features": {
+          "type": "object",
+          "properties": {
+            "research": {
+              "type": "object",
+              "properties": {
+                "projectSubmissions": {
+                  "type": "boolean",
+                  "default": true
+                },
+                "collaborationTools": {
+                  "type": "boolean",
+                  "default": true
+                },
+                "dataSharing": {
+                  "type": "boolean",
+                  "default": true
+                }
+              }
+            },
+            "community": {
+              "type": "object",
+              "properties": {
+                "discussions": {
+                  "type": "boolean",
+                  "default": true
+                },
+                "events": {
+                  "type": "boolean",
+                  "default": true
+                },
+                "messaging": {
+                  "type": "boolean",
+                  "default": true
+                }
+              }
+            }
+          }
+        },
+        "api": {
+          "type": "object",
+          "properties": {
+            "rateLimiting": {
+              "type": "object",
+              "properties": {
+                "enabled": {
+                  "type": "boolean",
+                  "default": true
+                },
+                "requestsPerMinute": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              }
+            },
+            "cors": {
+              "type": "object",
+              "properties": {
+                "allowedOrigins": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "allowedMethods": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

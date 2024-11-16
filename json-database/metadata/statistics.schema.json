@@ -1,0 +1,116 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["version", "lastUpdated", "statistics"],
+  "properties": {
+    "version": {
+      "type": "string",
+      "description": "Schema version"
+    },
+    "lastUpdated": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Last update timestamp"
+    },
+    "statistics": {
+      "type": "object",
+      "required": ["general", "research", "engagement"],
+      "properties": {
+        "general": {
+          "type": "object",
+          "properties": {
+            "totalUsers": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Total number of registered users"
+            },
+            "activeUsers": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Number of active users in last 30 days"
+            },
+            "totalProjects": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Total number of research projects"
+            },
+            "totalCaseStudies": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Total number of case studies"
+            },
+            "totalResources": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Total number of educational resources"
+            }
+          }
+        },
+        "research": {
+          "type": "object",
+          "properties": {
+            "projectsByCategory": {
+              "type": "object",
+              "description": "Project count by research category"
+            },
+            "projectsByRegion": {
+              "type": "object",
+              "description": "Project count by region"
+            },
+            "collaborationStats": {
+              "type": "object",
+              "properties": {
+                "crossBorder": {
+                  "type": "integer",
+                  "description": "Number of cross-border collaborations"
+                },
+                "institutionalCollaborations": {
+                  "type": "integer",
+                  "description": "Number of institutional collaborations"
+                }
+              }
+            }
+          }
+        },
+        "engagement": {
+          "type": "object",
+          "properties": {
+            "downloads": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Total resource downloads"
+            },
+            "citations": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Total citations of research"
+            },
+            "contributions": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Total community contributions"
+            }
+          }
+        }
+      }
+    },
+    "historicalData": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["timestamp", "metrics"],
+        "properties": {
+          "timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Timestamp of historical record"
+          },
+          "metrics": {
+            "type": "object",
+            "description": "Snapshot of metrics at this timestamp"
+          }
+        }
+      }
+    }
+  }
+}
