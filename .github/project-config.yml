@@ -1,0 +1,99 @@
+name: ENERConnect Development
+description: European Network for Energy Research Platform Development Tracker
+
+# Project Views Configuration
+views:
+  - name: Roadmap
+    type: roadmap
+    fields:
+      - milestone
+      - assignees
+      - labels
+      - status
+
+  - name: Board
+    type: board
+    fields:
+      - status
+      - priority
+      - assignees
+      - milestone
+
+  - name: Table
+    type: table
+    fields:
+      - title
+      - milestone
+      - status
+      - assignees
+      - labels
+      - created_at
+      - updated_at
+
+# Custom Fields
+fields:
+  - name: Status
+    type: single_select
+    options:
+      - label: "📋 Backlog"
+        description: "Not yet started"
+      - label: "🎯 Planning"
+        description: "In planning phase"
+      - label: "💻 In Progress"
+        description: "Currently being worked on"
+      - label: "👀 Review"
+        description: "Ready for review"
+      - label: "✅ Done"
+        description: "Completed"
+
+  - name: Priority
+    type: single_select
+    options:
+      - label: "🔥 High"
+        color: "#FF0000"
+      - label: "⚡ Medium"
+        color: "#FFA500"
+      - label: "🌱 Low"
+        color: "#00FF00"
+
+# Automation Rules
+automations:
+  - name: "Auto-assign to milestone"
+    if:
+      - added_to_project
+    then:
+      - set_field:
+          field: Status
+          value: "📋 Backlog"
+
+  - name: "Mark as done when PR merged"
+    if:
+      - pull_request_merged
+    then:
+      - set_field:
+          field: Status
+          value: "✅ Done"
+
+# Milestone Tracking
+milestones:
+  - name: "v0.1.0 - Foundation"
+    issues:
+      - "#1 Setup Vercel Deployment"
+      - "#2 Initialize JSON Database Structure"
+      - "#3 Complete Core Frontend Components"
+    due_date: "2024-02-15"
+
+  - name: "v0.2.0 - Core Features"
+    issues:
+      - "#4 Implement Authentication System"
+      - "#5 Add Search Functionality"
+      - "#6 Mobile Responsiveness"
+    due_date: "2024-03-15"
+
+  - name: "v0.3.0 - Community & Scale"
+    issues:
+      - "#7 Implement Internationalization"
+      - "#8 Add Analytics and Monitoring"
+      - "#9 Enhance Community Features"
+      - "#10 Performance Optimization"
+    due_date: "2024-04-15"
