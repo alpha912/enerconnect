@@ -236,11 +236,16 @@ We are committed to fostering an inclusive and welcoming community. Please read 
   <img src="https://raw.githubusercontent.com/alpha912/enerconnect/main/.github/sponsors.svg" alt="Sponsors" />
 </a>
 
-<sub>
-© 2024 ENERConnect.EU. All rights reserved.  
+---
 
-Licensed under [Apache 2.0](LICENSE). Built with ❤️ for the European energy research community.  
-[Terms](https://github.com/alpha912/enerconnect/wiki/Terms) · [Privacy](https://github.com/alpha912/enerconnect/wiki/Privacy) · [Security](https://github.com/alpha912/enerconnect/wiki/Security)
-</sub>
+<div align="center">
+  <sub>
+    &copy; 2024 ENERConnect.EU. All rights reserved.<br/>
+    Licensed under <a href="LICENSE">Apache 2.0</a>. Built with &hearts; for the European energy research community.<br/>
+    <a href="https://github.com/alpha912/enerconnect/wiki/Terms">Terms</a> &middot; 
+    <a href="https://github.com/alpha912/enerconnect/wiki/Privacy">Privacy</a> &middot; 
+    <a href="https://github.com/alpha912/enerconnect/wiki/Security">Security</a>
+  </sub>
+</div>
 
 </div>
