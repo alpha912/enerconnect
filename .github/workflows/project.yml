@@ -6,6 +6,11 @@ on:
   pull_request:
     types: [opened, edited, closed, reopened]
 
+permissions:
+  issues: write
+  pull-requests: write
+  repository-projects: write
+
 jobs:
   project_automation:
     runs-on: ubuntu-latest
@@ -13,7 +18,7 @@ jobs:
       - uses: actions/add-to-project@v0.5.0
         with:
           project-url: https://github.com/alpha912/enerconnect/projects/1
-          github-token: ${{ secrets.PROJECT_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
   update_project_item:
     runs-on: ubuntu-latest
@@ -23,7 +28,7 @@ jobs:
       - name: Update Project Item
         uses: actions/github-script@v6
         with:
-          github-token: ${{ secrets.PROJECT_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const event = context.payload;
             const issue = event.issue || event.pull_request;
