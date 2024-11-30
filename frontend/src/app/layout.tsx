@@ -30,8 +30,11 @@ export default function RootLayout({
               {children}
             </main>
             <footer className="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
-              <div className="max-w-5xl mx-auto px-4 py-8 text-center text-sm text-gray-500 dark:text-gray-400">
-                {new Date().getFullYear()} ENERConnect.EU - European Network for Energy Research
+              <div className="max-w-5xl mx-auto px-4 py-6 text-center text-sm text-gray-500 dark:text-gray-400">
+                <p className="mb-2">{new Date().getFullYear()} ENERConnect.EU - European Network for Energy Research</p>
+                <p className="text-xs max-w-2xl mx-auto">
+                  ENERConnect.EU [Independent Project]: A community-driven, open-source platform connecting researchers, institutions, and stakeholders across Europe to accelerate energy transition through open collaboration. Not affiliated with any official organizations.
+                </p>
               </div>
             </footer>
           </div>
