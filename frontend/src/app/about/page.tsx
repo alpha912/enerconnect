@@ -36,6 +36,16 @@ const features = [
   }
 ];
 
+const mission = {
+  title: "Our Mission",
+  description: "To accelerate Europe's energy transition by fostering collaboration, knowledge sharing, and innovation across the research community."
+};
+
+const vision = {
+  title: "Our Vision",
+  description: "A connected European energy research ecosystem that drives sustainable solutions and shapes the future of energy."
+};
+
 function FeatureCard({ title, description, icon }: { title: string, description: string, icon: string }) {
   // Convert markdown-style bold to JSX
   const formattedDescription = description.split('**').map((part, index) => 
@@ -43,7 +53,7 @@ function FeatureCard({ title, description, icon }: { title: string, description:
   );
 
   return (
-    <div className="border border-gray-200 dark:border-gray-700 rounded-lg p-6 hover:shadow-lg transition-shadow">
+    <div className="border border-gray-200 dark:border-gray-700 rounded-lg p-6 hover:shadow-lg transition-shadow text-center">
       <div className="text-3xl mb-4">{icon}</div>
       <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white">{title}</h3>
       <p className="text-gray-900 dark:text-white">{formattedDescription}</p>
@@ -53,57 +63,51 @@ function FeatureCard({ title, description, icon }: { title: string, description:
 
 export default function About() {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center p-24">
-      <div className="z-10 max-w-6xl w-full items-center justify-between">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold mb-4">
-            <span className="text-gray-900 dark:text-white">About </span>
-            <span className="text-primary-500">ENER</span>
-            <span className="text-gray-900 dark:text-white">Connect</span>
-            <span className="text-primary-500">.EU</span>
-          </h1>
-          <p className="text-xl mb-8 text-gray-900 dark:text-white">
-            Building Europe's premier platform for energy research collaboration
-          </p>
-        </div>
-
-        {/* Mission Statement */}
-        <div className="border border-gray-200 dark:border-gray-700 rounded-lg p-8 mb-16">
+    <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <h1 className="text-4xl font-bold text-center text-gray-900 dark:text-white mb-4">
+        About ENERConnect.EU
+      </h1>
+      
+      <div className="grid grid-cols-1 gap-8 mt-12 mb-16 max-w-3xl mx-auto">
+        <div className="border border-gray-200 dark:border-gray-700 rounded-lg p-8 mb-16 text-center">
           <h2 className="text-2xl font-bold mb-4 text-primary-500">Our Mission</h2>
           <p className="text-gray-900 dark:text-white">
             Our mission is to accelerate Europe's journey toward sustainable energy by centralizing knowledge,
             fostering collaboration, and enabling real-time sharing of project outcomes and insights.
           </p>
         </div>
+      </div>
 
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {features.map((feature, index) => (
-            <FeatureCard key={index} {...feature} />
-          ))}
-        </div>
+      <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-8">
+        What We Offer
+      </h2>
 
-        {/* Vision Section */}
-        <div className="bg-primary-500 text-white rounded-lg p-8">
-          <h2 className="text-2xl font-bold mb-4">Our Vision</h2>
-          <p>
-            We envision a future where Europe leads the global energy transition through collaborative
-            innovation and shared knowledge. Join us in building this sustainable future.
-          </p>
-        </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        {features.map((feature, index) => (
+          <FeatureCard
+            key={index}
+            title={feature.title}
+            description={feature.description}
+            icon={feature.icon}
+          />
+        ))}
+      </div>
 
-        {/* Call to Action */}
-        <div className="text-center mt-16">
-          <Link
-            href="https://github.com/alpha912/enerconnect/discussions"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block px-6 py-3 bg-primary-500 text-white rounded-lg hover:bg-opacity-90 transition-colors"
-          >
-            Join Our Network
-          </Link>
-        </div>
+      <div className="bg-primary-500 text-white rounded-lg p-8 text-center">
+        <h2 className="text-2xl font-bold mb-4">Our Vision</h2>
+        <p>
+          We envision a future where Europe leads the global energy transition through collaborative
+          innovation and shared knowledge. Join us in building this sustainable future.
+        </p>
+      </div>
+
+      <div className="text-center mt-16">
+        <Link
+          href="/network"
+          className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary-500 hover:bg-primary-600 transition-colors duration-200"
+        >
+          Join Our Network
+        </Link>
       </div>
     </div>
   );

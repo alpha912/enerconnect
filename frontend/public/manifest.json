@@ -1,0 +1,75 @@
+{
+    "theme_color": "#1a73e8",
+    "name": "ENERConnect.EU - European Energy Research Network",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "short_name": "ENERConnect.EU",
+    "description": "European Network for Energy Research, Collaboration, and Knowledge Exchange",
+    "icons": [
+        {
+            "type": "image/png",
+            "sizes": "16x16",
+            "src": "/icons/favicon-16x16.png"
+        },
+        {
+            "type": "image/png",
+            "sizes": "32x32",
+            "src": "/icons/favicon-32x32.png"
+        },
+        {
+            "type": "image/png",
+            "sizes": "48x48",
+            "src": "/icons/favicon-48x48.png"
+        },
+        {
+            "type": "image/png",
+            "sizes": "64x64",
+            "src": "/icons/favicon-64x64.png"
+        },
+        {
+            "type": "image/png",
+            "sizes": "72x72",
+            "src": "/icons/favicon-72x72.png"
+        },
+        {
+            "type": "image/png",
+            "sizes": "96x96",
+            "src": "/icons/favicon-96x96.png"
+        },
+        {
+            "type": "image/png",
+            "sizes": "128x128",
+            "src": "/icons/favicon-128x128.png"
+        },
+        {
+            "type": "image/png",
+            "sizes": "144x144",
+            "src": "/icons/favicon-144x144.png"
+        },
+        {
+            "type": "image/png",
+            "sizes": "152x152",
+            "src": "/icons/favicon-152x152.png"
+        },
+        {
+            "type": "image/png",
+            "sizes": "192x192",
+            "src": "/icons/favicon-192x192.png"
+        },
+        {
+            "type": "image/png",
+            "sizes": "384x384",
+            "src": "/icons/favicon-384x384.png"
+        },
+        {
+            "type": "image/png",
+            "sizes": "512x512",
+            "src": "/icons/favicon-512x512.png"
+        }
+    ],
+    "start_url": "/",
+    "scope": "/",
+    "orientation": "any",
+    "lang": "en",
+    "dir": "ltr"
+}

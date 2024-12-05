@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import type { Metadata } from 'next';
 import { Navigation } from '@/components/Navigation';
 import { DarkModeProvider } from '@/hooks/useDarkMode';
+import Image from 'next/image';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -31,10 +32,22 @@ export default function RootLayout({
             </main>
             <footer className="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
               <div className="max-w-5xl mx-auto px-4 py-6 text-center text-sm text-gray-500 dark:text-gray-400">
+                <div className="flex justify-center mb-4">
+                  <Image
+                    src="/icons/favicon-96x96.png"
+                    alt="ENERConnect.EU Logo"
+                    width={48}
+                    height={48}
+                    className="dark:opacity-90"
+                  />
+                </div>
                 <p className="mb-2">{new Date().getFullYear()} ENERConnect.EU - European Network for Energy Research</p>
-                <p className="text-xs max-w-2xl mx-auto">
+                <p className="text-xs max-w-2xl mx-auto mb-4">
                   ENERConnect.EU [Independent Project]: A community-driven, open-source platform connecting researchers, institutions, and stakeholders across Europe to accelerate energy transition through open collaboration. Not affiliated with any official organizations.
                 </p>
+                <div className="text-xs text-gray-400 dark:text-gray-500">
+                  Icons made by <a href="https://www.flaticon.com/authors/canticons" title="Canticons" className="text-primary-500 hover:underline">Canticons</a> from <a href="https://www.flaticon.com/" title="Flaticon" className="text-primary-500 hover:underline">www.flaticon.com</a>
+                </div>
               </div>
             </footer>
           </div>
