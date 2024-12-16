@@ -13,18 +13,42 @@ export function Navigation() {
 
   const navLinks = [
     { href: '/', label: 'Home' },
-    { href: '/about', label: 'About' },
-    { href: '/research-network', label: 'Research Network' },
+    { 
+      href: '/communities', 
+      label: 'Communities',
+      subItems: [
+        { href: '/communities/programs', label: 'Research Programs' },
+        { href: '/communities/projects', label: 'Research Projects' },
+        { href: '/communities/create', label: 'Create Community' },
+      ]
+    },
+    { 
+      href: '/research-network', 
+      label: 'Expert Network',
+      subItems: [
+        { href: '/research-network/researchers', label: 'Researcher Directory' },
+        { href: '/research-network/institutions', label: 'Institution Network' },
+        { href: '/research-network/collaboration', label: 'Collaboration Tools' },
+      ]
+    },
     { 
       href: '/knowledge-hub', 
       label: 'Knowledge Hub',
       subItems: [
-        { href: '/knowledge-hub/policy', label: 'Policy Alignment' },
-        { href: '/knowledge-hub/education', label: 'Educational Resources' },
-        { href: '/knowledge-hub/resources', label: 'Resource Sharing' },
+        { href: '/knowledge-hub/policy', label: 'Policy Center' },
+        { href: '/knowledge-hub/education', label: 'Education Hub' },
+        { href: '/knowledge-hub/data', label: 'Data Repository' },
       ]
     },
-    { href: '/project-showcases', label: 'Project Showcases' },
+    { 
+      href: '/innovation-showcase', 
+      label: 'Innovation Showcase',
+      subItems: [
+        { href: '/innovation-showcase/case-studies', label: 'Case Studies' },
+        { href: '/innovation-showcase/success-stories', label: 'Success Stories' },
+        { href: '/innovation-showcase/map', label: 'Innovation Map' },
+      ]
+    },
   ];
 
   const toggleDropdown = (href: string) => {

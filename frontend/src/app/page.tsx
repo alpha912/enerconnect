@@ -6,19 +6,25 @@ import Image from 'next/image';
 
 const features = [
   {
-    title: "Research Network",
+    title: "Program & Project Communities",
+    description: "Connect with energy research programs and projects across Europe. Join existing communities or ",
+    impact: "create new ones",
+    afterImpact: "."
+  },
+  {
+    title: "Expert Network",
     description: "Connect with EU researchers, institutions, and industry stakeholders to drive ",
     impact: "innovation",
     afterImpact: "."
   },
   {
-    title: "Knowledge Exchange",
+    title: "Knowledge Hub",
     description: "Access case studies, best practices, and datasets to enhance ",
     impact: "collaboration",
     afterImpact: "."
   },
   {
-    title: "Project Showcases",
+    title: "Innovation Showcase",
     description: "Share and discover groundbreaking energy projects that create lasting ",
     impact: "impact",
     afterImpact: " across Europe."
@@ -47,36 +53,31 @@ export default function Home() {
           <span className="text-primary-500">.EU</span>
         </h1>
         
-        <p className="text-center text-xl mb-8 text-gray-900 dark:text-white">
+        <p className="text-center text-xl mb-12 text-gray-900 dark:text-white">
           European Network for Energy Research, Collaboration, and Knowledge Exchange
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+        {/* Feature Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           {features.map((feature, index) => (
-            <div
-              key={index}
-              className="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 text-center"
-            >
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                {feature.title}
-              </h3>
+            <div key={index} className="p-6 border border-gray-200 dark:border-gray-700 rounded-lg hover:shadow-lg transition-shadow">
+              <h3 className="text-lg font-semibold mb-4 text-primary-500">{feature.title}</h3>
               <p className="text-gray-600 dark:text-gray-300">
                 {feature.description}
-                <span className="text-primary-500 font-semibold">{feature.impact}</span>
+                <span className="font-semibold text-primary-500">{feature.impact}</span>
                 {feature.afterImpact}
               </p>
             </div>
           ))}
         </div>
 
-        <div className="mt-16 text-center">
+        {/* CTA Button */}
+        <div className="flex justify-center">
           <Link
-            href="https://github.com/alpha912/enerconnect"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block px-6 py-3 bg-primary-500 text-white rounded-lg hover:bg-opacity-90 transition-colors"
+            href="/communities"
+            className="px-8 py-4 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors font-semibold"
           >
-            Support Our Mission
+            Join Our Network
           </Link>
         </div>
       </div>
