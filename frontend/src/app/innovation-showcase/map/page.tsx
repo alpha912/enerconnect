@@ -1,7 +1,8 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
 
 const innovationHubs = [
   {
@@ -38,17 +39,26 @@ const innovationHubs = [
 
 const filterCategories = [
   'All',
-  'Smart Grid',
+  'Grid Technology',
   'Energy Storage',
-  'Renewable Energy',
-  'Energy Efficiency',
-  'Smart Buildings'
+  'Renewable Integration',
+  'Smart Buildings',
+  'Energy Markets',
+  'Mobility Solutions'
 ];
 
 export default function InnovationMap() {
+  const searchParams = useSearchParams();
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedHub, setSelectedHub] = useState<number | null>(null);
   const [mapView, setMapView] = useState('clusters'); // clusters, heatmap, markers
+
+  useEffect(() => {
+    const category = searchParams.get('category');
+    if (category && filterCategories.includes(category)) {
+      setSelectedCategory(category);
+    }
+  }, [searchParams]);
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

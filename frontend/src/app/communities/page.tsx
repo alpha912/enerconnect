@@ -1,9 +1,49 @@
+/**
+ * @file c:/Code/enerconnect/frontend/src/app/communities/page.tsx
+ * Communities page component displaying program and project communities
+ */
+
 'use client';
 
 import React from 'react';
 import Link from 'next/link';
 
-const communityTypes = [
+// Type definitions for better type safety and documentation
+interface CommunityType {
+  title: string;
+  description: string;
+  link: string;
+  stats: {
+    [key: string]: string;
+  };
+}
+
+interface FeaturedCommunity {
+  type: 'Program' | 'Project';
+  title: string;
+  description: string;
+  stats: {
+    projects?: number;
+    workgroups?: number;
+    members: string;
+  };
+  link?: string;
+  status?: string;
+}
+
+interface ArchivedCommunity {
+  type: 'Program' | 'Project';
+  title: string;
+  description: string;
+  stats: {
+    publications: number;
+    participants: string;
+  };
+  endDate: string;
+}
+
+// Community data with proper typing
+const communityTypes: CommunityType[] = [
   {
     title: 'Research Programs',
     description: 'Active research programs across Europe',
@@ -26,7 +66,7 @@ const communityTypes = [
   }
 ];
 
-const featuredCommunities = [
+const featuredCommunities: FeaturedCommunity[] = [
   {
     type: 'Program',
     title: 'Energy Storage Innovation',
@@ -59,7 +99,7 @@ const featuredCommunities = [
   }
 ];
 
-const archivedCommunities = [
+const archivedCommunities: ArchivedCommunity[] = [
   {
     type: 'Program',
     title: 'Battery Storage Research',
@@ -173,7 +213,7 @@ export default function Communities() {
             index < 2 ? (
               <Link
                 key={index}
-                href={community.link}
+                href={community.link || '#'}
                 className="group block bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6 
                   transform transition-all duration-300 hover:shadow-lg hover:-translate-y-1
                   hover:scale-[1.02]"
