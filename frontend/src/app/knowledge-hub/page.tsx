@@ -31,7 +31,7 @@ const categories = [
     title: "Data Repository",
     icon: "📊",
     description: "Access research datasets, analysis tools, and documentation for energy projects.",
-    link: "/knowledge-hub/data",
+    link: "/knowledge-hub/resources",
     stats: {
       datasets: "200+",
       tools: "35+",

@@ -4,7 +4,42 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-const featuredInnovations = [
+interface Innovation {
+  title: string;
+  projectName: string;
+  fundingProgram: string;
+  grantId: string;
+  fundingAmount: string;
+  duration: string;
+  category: string;
+  institution: string;
+  impact: string;
+  image: string;
+  tags: string[];
+  stage: string;
+}
+
+interface InnovationCategory {
+  name: string;
+  count: number;
+  icon: string;
+  program: string;
+}
+
+interface FundingProgram {
+  name: string;
+  description: string;
+  totalProjects: number;
+  totalFunding: string;
+  focus: string[];
+}
+
+interface InnovationMetric {
+  label: string;
+  value: string;
+}
+
+const featuredInnovations: Innovation[] = [
   {
     title: 'Smart Grid Integration Platform',
     projectName: 'GridFlex Europe',
@@ -49,7 +84,7 @@ const featuredInnovations = [
   }
 ];
 
-const innovationCategories = [
+const innovationCategories: InnovationCategory[] = [
   { name: 'Grid Technology', count: 45, icon: '', program: 'Horizon Europe' },
   { name: 'Energy Storage', count: 32, icon: '', program: 'Innovation Fund' },
   { name: 'Renewable Integration', count: 38, icon: '', program: 'LIFE' },
@@ -58,7 +93,7 @@ const innovationCategories = [
   { name: 'Mobility Solutions', count: 19, icon: '', program: 'LIFE' }
 ];
 
-const fundingPrograms = [
+const fundingPrograms: FundingProgram[] = [
   {
     name: 'Horizon Europe',
     description: "EU's key funding programme for research and innovation",
@@ -82,7 +117,7 @@ const fundingPrograms = [
   }
 ];
 
-const innovationMetrics = [
+const innovationMetrics: InnovationMetric[] = [
   { label: 'Funded Projects', value: '180+' },
   { label: 'Total Funding', value: '€650M' },
   { label: 'Partner Institutions', value: '45' },
@@ -197,7 +232,9 @@ export default function InnovationShowcase() {
           </Link>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
-          {[...new Map(featuredInnovations.map(item => [item.title, item])).values()].map((innovation, index) => (
+          {Array.from(
+            new Map(featuredInnovations.map(item => [item.title, item])).values()
+          ).map((innovation: Innovation, index: number) => (
             <article
               key={index}
               className="flex flex-col bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden h-full group hover:shadow-lg transition-all duration-300"
@@ -246,7 +283,7 @@ export default function InnovationShowcase() {
                 </div>
 
                 <div className="flex flex-wrap gap-2 mb-6">
-                  {innovation.tags.map((tag, tagIndex) => (
+                  {innovation.tags.map((tag: string, tagIndex: number) => (
                     <span
                       key={tagIndex}
                       className="px-2 py-1 text-xs bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded"
