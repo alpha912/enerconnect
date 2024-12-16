@@ -9,25 +9,33 @@ const features = [
     title: "Program & Project Communities",
     description: "Connect with energy research programs and projects across Europe. Join existing communities or ",
     impact: "create new ones",
-    afterImpact: "."
+    afterImpact: ".",
+    link: "/communities",
+    icon: "/icons/communities.png"
   },
   {
     title: "Expert Network",
     description: "Connect with EU researchers, institutions, and industry stakeholders to drive ",
     impact: "innovation",
-    afterImpact: "."
+    afterImpact: ".",
+    link: "/research-network",
+    icon: "/icons/expert.png"
   },
   {
     title: "Knowledge Hub",
     description: "Access case studies, best practices, and datasets to enhance ",
     impact: "collaboration",
-    afterImpact: "."
+    afterImpact: ".",
+    link: "/knowledge-hub",
+    icon: "/icons/knowledge.png"
   },
   {
     title: "Innovation Showcase",
     description: "Share and discover groundbreaking energy projects that create lasting ",
     impact: "impact",
-    afterImpact: " across Europe."
+    afterImpact: " across Europe.",
+    link: "/innovation-showcase",
+    icon: "/icons/innovation.png"
   }
 ];
 
@@ -60,14 +68,36 @@ export default function Home() {
         {/* Feature Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           {features.map((feature, index) => (
-            <div key={index} className="p-6 border border-gray-200 dark:border-gray-700 rounded-lg hover:shadow-lg transition-shadow">
-              <h3 className="text-lg font-semibold mb-4 text-primary-500">{feature.title}</h3>
-              <p className="text-gray-600 dark:text-gray-300">
-                {feature.description}
-                <span className="font-semibold text-primary-500">{feature.impact}</span>
-                {feature.afterImpact}
-              </p>
-            </div>
+            <Link 
+              href={feature.link} 
+              key={index} 
+              className="group block"
+            >
+              <div className="p-6 border border-gray-200 dark:border-gray-700 rounded-lg 
+                             transform transition-all duration-300 ease-in-out
+                             hover:shadow-xl hover:scale-[1.02] hover:border-primary-500 dark:hover:border-primary-400
+                             bg-white dark:bg-gray-800 text-center">
+                <div className="flex justify-center mb-6">
+                  <Image
+                    src={feature.icon}
+                    alt={`${feature.title} Icon`}
+                    width={64}
+                    height={64}
+                    className="filter dark:invert dark:brightness-90 opacity-80 group-hover:opacity-100 transition-opacity"
+                  />
+                </div>
+                <h3 className="text-lg font-semibold mb-4 text-primary-500 group-hover:text-primary-600 transition-colors">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300">
+                  {feature.description}
+                  <span className="font-semibold text-primary-500 group-hover:text-primary-600 transition-colors">
+                    {feature.impact}
+                  </span>
+                  {feature.afterImpact}
+                </p>
+              </div>
+            </Link>
           ))}
         </div>
 

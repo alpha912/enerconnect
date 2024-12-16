@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const featuredInnovations = [
   {
@@ -25,7 +26,7 @@ const featuredInnovations = [
     grantId: 'LIFE-2023-789012',
     fundingAmount: '€1.8M',
     duration: '2023-2024',
-    category: 'Storage',
+    category: 'Energy Storage',
     institution: 'KTH Royal Institute of Technology',
     impact: '30% cost reduction in energy storage',
     image: '/images/innovations/energy-storage.jpg',
@@ -39,7 +40,7 @@ const featuredInnovations = [
     grantId: 'IF-2023-345678',
     fundingAmount: '€3.2M',
     duration: '2023-2025',
-    category: 'Software',
+    category: 'Renewable Integration',
     institution: 'DTU - Technical University of Denmark',
     impact: '85% prediction accuracy',
     image: '/images/innovations/forecasting.jpg',
@@ -95,6 +96,15 @@ export default function InnovationShowcase() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       {/* Hero Section */}
       <div className="text-center mb-16">
+        <div className="flex justify-center mb-8">
+          <Image
+            src="/icons/innovation.png"
+            alt="Innovation Showcase Icon"
+            width={96}
+            height={96}
+            className="filter dark:invert dark:brightness-90 opacity-80"
+          />
+        </div>
         <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
           Innovation Showcase
         </h1>
@@ -196,7 +206,7 @@ export default function InnovationShowcase() {
                 <div className="aspect-w-16 aspect-h-9">
                   <img
                     src={innovation.image}
-                    alt={innovation.title}
+                    alt=""
                     className="object-cover w-full h-full"
                   />
                 </div>
@@ -206,9 +216,9 @@ export default function InnovationShowcase() {
                   </span>
                 </div>
               </header>
-              <div className="flex flex-col flex-grow p-6">
-                <div className="mb-4">
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+              <div className="flex flex-col flex-grow p-6 pt-12">
+                <div className="mb-6">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2 line-clamp-2">
                     {innovation.title}
                   </h3>
                   <div className="text-sm text-gray-600 dark:text-gray-300">
@@ -221,7 +231,7 @@ export default function InnovationShowcase() {
                     <div className="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-1">
                       Program
                     </div>
-                    <div className="text-sm font-medium text-gray-900 dark:text-white">
+                    <div className="text-sm font-medium text-gray-900 dark:text-white truncate">
                       {innovation.fundingProgram}
                     </div>
                   </div>
@@ -229,7 +239,7 @@ export default function InnovationShowcase() {
                     <div className="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-1">
                       Stage
                     </div>
-                    <div className="text-sm font-medium text-gray-900 dark:text-white">
+                    <div className="text-sm font-medium text-gray-900 dark:text-white truncate">
                       {innovation.stage}
                     </div>
                   </div>

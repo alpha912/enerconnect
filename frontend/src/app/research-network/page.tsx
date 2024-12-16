@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const networkStats = {
   researchers: '1,500+',
@@ -84,6 +85,15 @@ export default function ResearchNetwork() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       {/* Hero Section */}
       <div className="text-center mb-16">
+        <div className="flex justify-center mb-8">
+          <Image
+            src="/icons/expert.png"
+            alt="Expert Network Icon"
+            width={96}
+            height={96}
+            className="filter dark:invert dark:brightness-90 opacity-80"
+          />
+        </div>
         <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
           Expert Network
         </h1>

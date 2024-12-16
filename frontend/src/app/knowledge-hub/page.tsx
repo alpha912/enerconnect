@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const categories = [
   {
@@ -75,8 +76,17 @@ export default function KnowledgeHub() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       {/* Hero Section */}
       <div className="text-center mb-16">
+        <div className="flex justify-center mb-8">
+          <Image
+            src="/icons/knowledge.png"
+            alt="Knowledge Hub Icon"
+            width={96}
+            height={96}
+            className="filter dark:invert dark:brightness-90 opacity-80"
+          />
+        </div>
         <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-          Knowledge Exchange Hub
+          Knowledge Hub
         </h1>
         <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
           Access and share energy research knowledge across the European network
