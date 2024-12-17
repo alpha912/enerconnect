@@ -5,45 +5,35 @@ import Link from 'next/link';
 
 const features = [
   {
-    title: "Research Network",
-    description: "A **centralized network** connecting researchers, institutions, and industry stakeholders across Europe. Facilitating **idea exchange** and fostering **interdisciplinary partnerships**.",
+    title: "Research Communities",
+    description: "A **collaborative platform** for research communities to connect, share resources, and drive innovation. Create and join **thematic groups**, manage **research programs**, and foster **cross-border collaboration**.",
+    icon: "👥"
+  },
+  {
+    title: "Expert Network",
+    description: "Connect with leading **researchers**, **institutions**, and **industry experts** across Europe. Build your professional network and discover **collaboration opportunities** in clean energy research.",
     icon: "🔬"
   },
   {
-    title: "Knowledge Exchange Hub",
-    description: "Access our curated repository of **case studies**, **best practices**, and **open-access datasets** from EU-funded energy projects.",
-    icon: "💡"
-  },
-  {
-    title: "Project Showcases",
-    description: "Share **progress**, **outcomes**, and **innovations** on our platform. Bridge the gap between **research** and **market applications**.",
-    icon: "🚀"
-  },
-  {
-    title: "Policy Alignment",
-    description: "Stay updated with **EU energy policies**, **regulations**, and **compliance standards**. Navigate evolving regulations with confidence.",
-    icon: "📜"
-  },
-  {
-    title: "Educational Resources",
-    description: "Access comprehensive **training materials**, **webinars**, and **workshops** to enhance expertise in clean energy.",
+    title: "Knowledge Hub",
+    description: "Access comprehensive **policy resources**, **educational materials**, and **research data**. Stay informed with the latest developments in energy research and policy.",
     icon: "📚"
   },
   {
-    title: "Resource Sharing",
-    description: "Utilize our library of **tools**, **datasets**, and **technical resources**. Promoting **open access** to EU-funded project information.",
-    icon: "📊"
+    title: "Innovation Showcase",
+    description: "Explore groundbreaking **research outcomes**, **success stories**, and **innovative solutions** through our interactive innovation map and case studies.",
+    icon: "💡"
   }
 ];
 
 const mission = {
   title: "Our Mission",
-  description: "To accelerate Europe's energy transition by fostering collaboration, knowledge sharing, and innovation across the research community."
+  description: "To empower European energy research communities by providing a collaborative platform that facilitates knowledge sharing, accelerates innovation, and strengthens cross-border partnerships for a sustainable energy future."
 };
 
 const vision = {
   title: "Our Vision",
-  description: "A connected European energy research ecosystem that drives sustainable solutions and shapes the future of energy."
+  description: "To be the cornerstone of European energy research collaboration, where diverse communities come together to drive breakthrough innovations and shape the future of sustainable energy systems."
 };
 
 function FeatureCard({ title, description, icon }: { title: string, description: string, icon: string }) {
@@ -72,8 +62,7 @@ export default function About() {
         <div className="border border-gray-200 dark:border-gray-700 rounded-lg p-8 mb-16 text-center">
           <h2 className="text-2xl font-bold mb-4 text-primary-500">Our Mission</h2>
           <p className="text-gray-900 dark:text-white">
-            Our mission is to accelerate Europe's journey toward sustainable energy by centralizing knowledge,
-            fostering collaboration, and enabling real-time sharing of project outcomes and insights.
+            {mission.description}
           </p>
         </div>
       </div>
@@ -82,7 +71,7 @@ export default function About() {
         What We Offer
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
         {features.map((feature, index) => (
           <FeatureCard
             key={index}
@@ -96,8 +85,7 @@ export default function About() {
       <div className="bg-primary-500 text-white rounded-lg p-8 text-center">
         <h2 className="text-2xl font-bold mb-4">Our Vision</h2>
         <p>
-          We envision a future where Europe leads the global energy transition through collaborative
-          innovation and shared knowledge. Join us in building this sustainable future.
+          {vision.description}
         </p>
       </div>
 

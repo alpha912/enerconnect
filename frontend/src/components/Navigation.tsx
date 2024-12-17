@@ -49,6 +49,7 @@ export function Navigation() {
         { href: '/innovation-showcase/map', label: 'Innovation Map' },
       ]
     },
+    { href: '/about', label: 'About' }
   ];
 
   const toggleDropdown = (href: string) => {
