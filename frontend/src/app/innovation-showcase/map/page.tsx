@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 
@@ -48,6 +48,14 @@ const filterCategories = [
 ];
 
 export default function InnovationMap() {
+  return (
+    <Suspense fallback={<div>Loading map content...</div>}>
+      <InnovationMapClient />
+    </Suspense>
+  );
+}
+
+function InnovationMapClient() {
   const searchParams = useSearchParams();
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedHub, setSelectedHub] = useState<number | null>(null);
